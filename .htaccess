@@ -1,0 +1,22 @@
+<IfModule mod_headers.c>
+	Header set X-UA-Compatible "IE=edge,chrome=1"
+	Header set P3P "policyref=\"/w3c/p3p.xml\", CP=\"IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi CONi HIS OUR IND CNT\""
+	Header set Access-Control-Allow-Origin "*"
+	#Header set Cache-Control "no-transform"
+	Header set Cache-Control "public"
+	Header set Connection "Keep-Alive"
+	Header unset ETag
+	
+	<FilesMatch "\.(xml|js|css)(\.gz)?$">
+		Header set Expires "Thu, 15 Apr 2018 20:00:00 GMT"
+		Header set Cache-Control "max-age=640000, must-revalidate"
+	</FilesMatch>
+    
+	<FilesMatch "\.(appcache|crx|css|eot|gif|htc|ico|jpe?g|js|m4a|m4v|manifest|mp4|oex|oga|ogg|ogv|otf|pdf|png|safariextz|svg|svgz|ttf|vcf|webapp|webm|webp|woff|xml|xpi)$">
+        Header unset X-UA-Compatible
+    </FilesMatch>
+    
+	<FilesMatch "\.(eot|font.css|otf|ttc|ttf|woff)$">
+        Header set Access-Control-Allow-Origin "*"
+    </FilesMatch>
+</IfModule>
