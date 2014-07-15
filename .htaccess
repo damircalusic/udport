@@ -22,18 +22,17 @@
 </IfModule>
 
 <IfModule mod_expires.c>
-    ExpiresActive on
-    ExpiresDefault                                      "access plus 1 month"
-    ExpiresByType text/css                              "access plus 1 year"
+    	ExpiresActive on
+    	ExpiresDefault                                      "access plus 1 month"
+    	ExpiresByType text/css                              "access plus 1 year"
 	ExpiresByType application/json                      "access plus 0 seconds"
-    ExpiresByType application/xml                       "access plus 0 seconds"
-    ExpiresByType text/xml                              "access plus 0 seconds"
+    	ExpiresByType application/xml                       "access plus 0 seconds"
+	ExpiresByType text/xml                              "access plus 0 seconds"
 	ExpiresByType image/x-icon                          "access plus 1 week"
 	ExpiresByType text/html                             "access plus 0 seconds"
 	ExpiresByType application/javascript                "access plus 1 year"
- ExpiresByType image/gif                             "access plus 1 month"
-    ExpiresByType image/jpeg                            "access plus 1 month"
-    ExpiresByType image/png                             "access plus 1 month"
-     ExpiresByType image/svg+xml                         "access plus 1 month"
+ 	ExpiresByType image/gif                             "access plus 1 month"
+    	ExpiresByType image/jpeg                            "access plus 1 month"
+    	ExpiresByType image/png                             "access plus 1 month"
+     	ExpiresByType image/svg+xml                         "access plus 1 month"
 </IfModule>
-
